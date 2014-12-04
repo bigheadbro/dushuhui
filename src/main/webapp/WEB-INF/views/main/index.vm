@@ -1,0 +1,22 @@
+#set($layout = "/layout/index_layout.vm")
+<div class="main">
+	<div class="head">
+		<a class="current">最热聚会</a>
+		<a>最in书籍</a>
+		<a>最新会员</a>
+	</div>
+	<div class="type">
+		<a class="current">最近一周</a><a>30天</a><a>90天</a>
+	</div>
+	<div class="content">
+		<a class="item">
+			<img src="img/pic1.jpg" />
+			<p>Friends的读书会</p>
+			<div class="info">
+				<span class="joiners">9</span>
+				<span class="creator">庄壮亮</span>
+				<span class="frequency">每月</span>
+			</div>
+		</a>
+	</div>
+</div>

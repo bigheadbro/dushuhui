@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="user">
+	<resultMap type="UserEntity" id="UserResultMap">
+	  <!---->
+	  <id property="userId" column="user_id"/>
+   	  <!---->
+	  <id property="userName" column="user_name"/>
+   	  <!---->
+	  <id property="loginName" column="login_name"/>
+   	  <!---->
+	  <id property="password" column="password"/>
+   	  <!---->
+	  <id property="studentId" column="student_id"/>
+   	  <!---->
+	  <id property="userSex" column="user_sex"/>
+   	  <!---->
+	  <id property="userBirthday" column="user_birthday"/>
+   	  <!---->
+	  <id property="schoolName" column="school_name"/>
+   	  <!---->
+	  <id property="classId" column="class_id"/>
+   	  <!---->
+	  <id property="userCity" column="user_city"/>
+	</resultMap>
+
+	<select id="queryUserEntityById" parameterType="int" resultMap="UserResultMap">
+	<![CDATA[
+		SELECT * from t_user t WHERE t.id = #{id}
+	]]>
+	</select>
+
+	<select id="queryUserEntityByMail" parameterType="String" resultMap="UserResultMap">
+	<![CDATA[
+		SELECT * from t_user t WHERE t.login_name = #{cn}
+	]]>
+	</select>
+
+	<insert id="insertUserEntity" parameterType="UserEntity">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+		insert into t_user
+		(
+		id
+		,name
+		,cardno
+		,birth
+		,gender
+		,domicile
+		,school
+		,major
+		,industry
+		,position
+		,salary
+		,welfare
+		,vacation
+		,freedom
+		,burden
+		,development
+		,training
+		,wtrip
+		,atmosphere
+		,brand
+		,distance
+		,lowSalary
+		,expectedSalary
+		,stateown
+		,institution
+		,administration
+		,foreig
+		,privat
+		,startup
+		,ngo
+		,commonweal
+		,state)
+		values
+		(
+		#{id}
+		,#{name}
+		,#{cardno}
+		,#{birth}
+		,#{gender}
+		,#{domicile}
+		,#{school}
+		,#{major}
+		,#{industry}
+		,#{position}
+		,#{salary}
+		,#{welfare}
+		,#{vacation}
+		,#{freedom}
+		,#{burden}
+		,#{development}
+		,#{training}
+		,#{wtrip}
+		,#{atmosphere}
+		,#{brand}
+		,#{distance}
+		,#{lowSalary}
+		,#{expectedSalary}
+		,#{stateown}
+		,#{institution}
+		,#{administration}
+		,#{foreig}
+		,#{privat}
+		,#{startup}
+		,#{ngo}
+		,#{commonweal}
+		,#{state}
+		)
+	</insert>
+	
+	<update id="updateStateById" parameterType="UserEntity">
+		update t_user set state = #{state} where id=#{id}
+	</update>
+</mapper>
+	
