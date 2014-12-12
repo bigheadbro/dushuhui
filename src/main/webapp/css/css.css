@@ -26,9 +26,10 @@ a.common:hover{text-decoration:underline;color:#00c0ff}
 /* end of clearfix */
 .output{padding-left:170px}
 .navbar{width:170px;background: #2f2f2f;box-shadow: inset 0 0 10px #1d1d1d;position: fixed;left:0;top:0;height:100%;z-index: 1049;color:white;}
-.navbar .dropdown a{display:block;text-align: center;padding: 10px;}
+.navbar .dropdown a{display:block;text-align: left;padding: 10px;}
 .navbar .dropdown a.current{background-color: #6CB0E0;box-shadow: inset 0 0 10px #0073AE;}
 .navbar .dropdown a:hover{background-color: #6CB0E0;}
+.navbar .dropdown a span{padding-left:8px;}
 .row-fluid{width:100%;height: 100%;}
 .row-fluid .left-side{width:25%;position:fixed;height: 100%;}
 .row-fluid .left-side .cover-img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-position: center;background-size: cover;background-image:url(../img/back.jpg)}
