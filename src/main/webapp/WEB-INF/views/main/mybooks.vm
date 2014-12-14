@@ -1,0 +1,15 @@
+#set($layout = "/layout/index_layout.vm")
+<div class="main">
+	<div class="head">
+		<a class="current">最热聚会</a>
+		<a>最in书籍</a>
+		<a>最新会员</a>
+	</div>
+	<div class="type">
+		<a class="current">最近一周</a><a>30天</a><a>90天</a>
+	</div>
+	<div class="content">
+		<form method="post" action="/adduserbook">
+		</form>
+	</div>
+</div>

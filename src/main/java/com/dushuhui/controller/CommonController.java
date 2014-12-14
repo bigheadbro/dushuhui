@@ -1,9 +1,19 @@
 package com.dushuhui.controller;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONArray;
+import net.sf.json.JSONException;
+import net.sf.json.JSONObject;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,10 +32,10 @@ import org.springframework.web.util.WebUtils;
 
 import com.dushuhui.common.Account;
 import com.dushuhui.common.Result;
-
 import com.dushuhui.entity.UserEntity;
 import com.dushuhui.form.LoginForm;
 import com.dushuhui.service.CommonService;
+import com.dushuhui.util.Util;
 
 @Controller
 @RequestMapping("/")
@@ -49,6 +59,14 @@ public class CommonController extends BaseController{
 	{
 		ModelAndView mv = new ModelAndView("/main/index");
 
+		return mv;
+	}
+	
+	@RequestMapping(value="/adduserbook")
+	public ModelAndView adduserbook(final HttpServletRequest request,final HttpServletResponse response)
+	{
+		ModelAndView mv = new ModelAndView("/main/books");
+		mv.addObject("books",Util.searchBooks(""));
 		return mv;
 	}
 }
