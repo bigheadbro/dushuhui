@@ -1,6 +1,6 @@
 <div class="navbar">
 	<div class="dropdown">
-		<a class="current">首页</a>
-		<a>我的读书会</a>
+		<a class="current"><i class="fa fa-home fa-fw"></i><span>首页</span></a>
+		<a><i class="fa fa-book fa-fw"></i><span>我的读书会</span></a>
 	</div>
 </div>
