@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="user">
-	<resultMap type="UserEntity" id="UserResultMap">
+<mapper namespace="group">
+	<resultMap type="GroupEntity" id="GroupResultMap">
 		<id property="id" column="id" />
 		<id property="name" column="name" />
-		<id property="password" column="password" />
-		<id property="gmtCreate" column="gmt_create" />
-		<id property="gmtModify" column="gmt_modify" />
+		<id property="frequency" column="frequency" />
+		<id property="count" column="count" />
+		<id property="leader" column="leader" />
 	</resultMap>
 </mapper>

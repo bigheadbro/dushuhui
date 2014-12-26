@@ -28,8 +28,8 @@ public class GenerateMyBatisMapperUtil {
 		try {
 			connection = java.sql.DriverManager
 					.getConnection(
-							"jdbc:mysql://114.80.208.103:60306/daoju001?useUnicode=true&amp;characterEncoding=utf-8",
-							"root", "123123");
+							"jdbc:mysql://127.0.0.1:3306/dushuhui?useUnicode=true&characterEncoding=utf-8",
+							"root", "");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -124,7 +124,7 @@ public class GenerateMyBatisMapperUtil {
 			// 获取模板引擎
 			VelocityEngine ve = new VelocityEngine();
 			// 模板文件所在的路径
-			String path = "src/main/java/com/banzhuan/util";
+			String path = "src/main/java/com/dushuhui/util";
 			// 设置参数
 			ve.setProperty(Velocity.FILE_RESOURCE_LOADER_PATH, path);
 			// 处理中文问题
@@ -141,7 +141,7 @@ public class GenerateMyBatisMapperUtil {
 				// 把数据填入上下文
 				root.put("entity", entity);
 				// 输出
-			    //Writer sw = new PrintWriter(new FileOutputStream(new File("src/main/resources/mapper/banzhuan/entity/"+entity.getEntityName()+".java")));
+			    //Writer sw = new PrintWriter(new FileOutputStream(new File("src/main/resources/mapper/dushuhui/entity/"+entity.getEntityName()+".java")));
 				Writer sw = new StringWriter();
 				template.merge(root, sw);
 			    sw.flush();

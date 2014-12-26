@@ -2,7 +2,7 @@ package com.dushuhui.entity;
 
 import java.io.Serializable;
 
-public class UserEntity implements Serializable
+public class GroupEntity implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 	//
@@ -10,9 +10,9 @@ public class UserEntity implements Serializable
 	//
 	public String name;
 	//
-	public String password;
+	public int frequency;
 	//
-	public String gmtCreate;
+	public int count;
 	//
-	public String gmtModify;
+	public int leader;
 }

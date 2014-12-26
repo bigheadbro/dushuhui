@@ -2,17 +2,15 @@ package com.dushuhui.entity;
 
 import java.io.Serializable;
 
-public class UserEntity implements Serializable
+public class TopicEntity implements Serializable
 {
 	private static final long serialVersionUID = 1L;
 	//
 	public int id;
 	//
-	public String name;
+	public int groupid;
 	//
-	public String password;
+	public int owner;
 	//
-	public String gmtCreate;
-	//
-	public String gmtModify;
+	public String book;
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="group">
+	<resultMap type="GroupEntity" id="GroupResultMap">
+		<id property="id" column="id" />
+		<id property="groupid" column="groupid" />
+		<id property="owner" column="owner" />
+		<id property="book" column="book" />
+	</resultMap>
+</mapper>

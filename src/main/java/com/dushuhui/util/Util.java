@@ -9,7 +9,7 @@ import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dushuhui.entity.BookEntity;
+import com.dushuhui.entity.DouBookEntity;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONException;
@@ -18,9 +18,9 @@ import net.sf.json.JSONObject;
 public class Util {
 
 	//从豆瓣获取搜索的书
-	public static List<BookEntity> searchBooks(String param)
+	public static List<DouBookEntity> searchBooks(String param)
 	{
-		List<BookEntity> books = new ArrayList<BookEntity>();
+		List<DouBookEntity> books = new ArrayList<DouBookEntity>();
 		URLConnection connection = null;
         try {
             connection = new URL("https://api.douban.com/v2/book/search?q="+param).openConnection();
@@ -37,7 +37,7 @@ public class Util {
             JSONArray jsonArray = obj.getJSONArray("books");
             for (int i = 0; i < jsonArray.size(); i++)
             {
-            	BookEntity book = new BookEntity();
+            	DouBookEntity book = new DouBookEntity();
             	JSONObject obj1 = JSONObject.fromObject(jsonArray.get(i).toString());
             	book.title = obj1.getString("title");
             	book.author = obj1.getString("author");
@@ -54,9 +54,9 @@ public class Util {
             	book.pages = obj1.getString("pages");
             	book.average = JSONObject.fromObject(obj1.getString("rating")).getString("average");
             	JSONObject images = JSONObject.fromObject(obj1.getString("images"));
-            	book.images.small = images.getString("small");
-            	book.images.large = images.getString("large");
-            	book.images.medium = images.getString("medium");
+            	book.image.small = images.getString("small");
+            	book.image.large = images.getString("large");
+            	book.image.medium = images.getString("medium");
             	
             	books.add(book);
             }
