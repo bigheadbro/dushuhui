@@ -125,6 +125,28 @@ public class StringUtil {
 	}
 	
 	/**
+	 * base64 编码
+	 * @param key
+	 * @return
+	 * @throws Exception
+	 */
+	public static String encrypt(String str){
+		MessageDigest md = null;
+	    String ret = null;
+	    try
+	    {
+	        md = MessageDigest.getInstance("MD5");
+	        byte[] digest = md.digest(str.getBytes());
+	        ret = byte2hex(digest);
+	    }
+	    catch (Exception e)
+	    {
+	        e.printStackTrace();
+	    }
+	    return ret;
+	}
+	
+	/**
 	 * 判断字符串str1是否包含字符串数组strs中的每一个字符串
 	 * @param str1
 	 * @param strs

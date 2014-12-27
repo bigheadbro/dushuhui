@@ -1,80 +1,10 @@
-﻿body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td {
-	margin:0;
-	padding:0;
-	font-family: "微软雅黑";
-	font-size:12px/1.5;
+﻿.navbar-wrapper {position: absolute;top: 0;right: 0;left: 0;z-index: 20;}
+.header {background: #222;background-repeat: no-repeat;background-position: center 0;background-size: cover;padding: 138px 0 0;text-align: center;min-height: 400px;position: relative;}
+.logotxt {color: #fff;}
+.logotxt a{color: #fff;font-weight: 700;font-size: 48px;}
+.logotxt a:hover{color: #fff;text-decoratoin:underline;}
+/*768*/
+@media (min-width: 768px) 
+{
+	.navbar-wrapper {margin-top: 20px;}
 }
-i{font-style: normal;}
-body{position: relative;height: 100%;}
-img{border:none;}
-html{flow-y:scroll;height:100%;}  
-table{border-collapse: collapse;border-spacing: 0;}
-em{font-style:normal}
-ul, li, ol {
-list-style: none;
-}
-ul{display:block;}
-a{text-decoration: none;color: inherit;cursor:pointer;}
-a.common{color:#606060}
-a.common:hover{text-decoration:underline;color:#00c0ff}
-/* Clear Fix */ 
-.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; } 
-.clearfix { display:inline-block; } 
-/* Hide from IE Mac */ 
-.clearfix {display:block;} 
-/* End hide from IE Mac */ 
-/* end of clearfix */
-.output{padding-left:170px}
-.navbar{width:170px;background: #2f2f2f;box-shadow: inset 0 0 10px #1d1d1d;position: fixed;left:0;top:0;height:100%;z-index: 1049;color:white;}
-.navbar .dropdown a{display:block;text-align: left;padding: 10px;}
-.navbar .dropdown a.current{background-color: #6CB0E0;box-shadow: inset 0 0 10px #0073AE;}
-.navbar .dropdown a:hover{background-color: #6CB0E0;}
-.navbar .dropdown a span{padding-left:8px;}
-.row-fluid{width:100%;height: 100%;}
-.row-fluid .left-side{width:25%;position:fixed;height: 100%;}
-@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){  
-	.row-fluid .left-side{display:none}
-} 
-.row-fluid .left-side .cover-img{position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-position: center;background-size: cover;background-image:url(../img/back.jpg)}
-.row-fluid .left-side .bottom-block{position:absolute;bottom:0;left:0;padding:30px;}
-.row-fluid .left-side .bottom-block h1{color:white;}
-.row-fluid .left-side .bottom-block p{color:white;}
-.row-fluid .left-side .bottom-block a{display: inline-block;padding:10px 30px;border-radius:5px;text-align:center;color:white;background-color:green;margin-top: 20px;}
-.row-fluid .left-side .bottom-block a:hover{background-color:#35b123}
-.row-fluid .main{margin-left:25%;max-width: 1000px;padding-left: 43px;}
-@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){  
-	.row-fluid .main{margin-left:0%;max-width: 1000px;padding-left: 43px;}
-} 
-.row-fluid .main .head{border-bottom:1px solid #d2d2d2;padding-bottom:5px;margin-left: 15px;padding-top: 10px;}
-.row-fluid .main .head a.current{color:#545454}
-.row-fluid .main .head a{font-size: 14px;color:#BDBDBD}
-.row-fluid .main .type{padding-bottom:5px;margin-left: 15px;padding-top: 10px;}
-.row-fluid .main .type a.current{background-color:#6CB0E0;color:white;}
-.row-fluid .main .type a{border: 1px solid #eee;border-radius: 30px;font-size: 12px;padding: 5px 15px;display: inline-block;text-align: center;margin-right: 10px;color:#181818}
-.row-fluid .main .content{margin-left:15px;margin-top: 15px;}
-.row-fluid .main .content .item{color:#181818；width: 300px;display: inline-block;}
-.row-fluid .main .content .item p{margin-top: 5px;}
-.row-fluid .main .content .item img{width:300px;}
-.row-fluid .main .content .item .info{margin-top: 3px;color:#bbb;font-size: 14px;}
-.row-fluid .main .content .item span.creator{background: url(../img/head_icon.png) 0 -181px no-repeat;text-indent: 16px;display: inline-block;}
-.row-fluid .main .content .item span.joiners{background: url(../img/peo.png) no-repeat scroll left center rgba(0,0,0,0);text-indent: 20px;display: inline-block;margin-right: 5px;}
-.row-fluid .main .content .item span.frequency{display:inline-block;float:right;color:#f76300;}
-.row-fluid .main .content .item .left{}
-.row-fluid .main .content .item .right{}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

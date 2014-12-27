@@ -69,9 +69,5 @@ public class Util {
 	}
 	
 	public static void main(String args[]) { 
-		for(int i = 0;i<60;i++)
-		{
-			System.out.println("INSERT INTO `pupil`.`t_user` (`user_name`, `login_name`, `password`, `student_id`, `user_sex`, `user_birthday`, `school_name`, `class_id`, `user_city`) VALUES ('思来氏"+String.valueOf(i+1)+"', '"+String.valueOf(8001+i)+"', '123', '20140312', '1', '2012/05/04', '思来氏小学', '1403', '上海市');");
-		}
     } 
 }

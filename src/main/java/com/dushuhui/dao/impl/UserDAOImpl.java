@@ -15,8 +15,25 @@ public class UserDAOImpl extends SqlSessionDaoSupport implements UserDAO {
 	}
 	
 	@Override
-	public UserEntity queryUserEntityByMail(String cn) {
-		return this.getSqlSession().selectOne("queryUserEntityByMail", cn);
+	public UserEntity queryUserEntityByName(String name)
+	{
+		return this.getSqlSession().selectOne("queryUserEntityByName", name);
+	}
+	
+	@Override
+	public UserEntity queryUserEntityByMail(String mail) {
+		return this.getSqlSession().selectOne("queryUserEntityByMail", mail);
 	}
 
+	@Override
+	public int updateUserPwdById(UserEntity user)
+	{
+		return this.getSqlSession().update("updateUserPwdById", user);
+	}
+	
+	@Override
+	public int insertUserEntity(UserEntity user)
+	{
+		return this.getSqlSession().insert("insertUserEntity",user);
+	}
 }

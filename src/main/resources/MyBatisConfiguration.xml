@@ -3,6 +3,8 @@
 <configuration>
 	<typeAliases>
 	  	<typeAlias alias="UserEntity" type="com.dushuhui.entity.UserEntity" />
+	  	<typeAlias alias="TopicEntity" type="com.dushuhui.entity.TopicEntity" />
+	  	<typeAlias alias="GroupEntity" type="com.dushuhui.entity.GroupEntity" />
 	</typeAliases>
 
 	<mappers>

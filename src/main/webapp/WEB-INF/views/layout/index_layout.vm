@@ -1,11 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 	#parse("/control/header.vm")
-	<body class="output">
-		#parse("/control/navbar.vm")
-		<div class="row-fluid">
-			#parse("/control/left.vm")
+	<body>
+		<div class="wrap">
+			#parse("/control/nav.vm")
 			$screen_content
 		</div>
+		#parse("/control/footer.vm")
 	</body>
 </html>

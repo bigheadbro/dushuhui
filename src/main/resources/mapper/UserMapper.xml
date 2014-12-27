@@ -8,4 +8,55 @@
 		<id property="gmtCreate" column="gmt_create" />
 		<id property="gmtModify" column="gmt_modify" />
 	</resultMap>
+	
+	<select id="queryUserEntityById" parameterType="int"
+		resultMap="UserResultMap">
+	<![CDATA[
+		SELECT * from t_user t WHERE t.id = #{id}
+	]]>
+	</select>
+	
+	<select id="queryUserEntityByName" parameterType="String"
+		resultMap="UserResultMap">
+	<![CDATA[
+		SELECT * from t_user t WHERE t.name = #{name}
+	]]>
+	</select>
+	
+	<select id="queryUserEntityByMail" parameterType="String"
+		resultMap="UserResultMap">
+	<![CDATA[
+		SELECT * from t_user t WHERE t.mail = #{mail}
+	]]>
+	</select>
+	
+	<!-- 新代理商信息 -->
+	<insert id="insertUserEntity" parameterType="UserEntity">
+		<selectKey resultType="int" order="AFTER" keyProperty="id">
+			SELECT LAST_INSERT_ID() AS id
+		</selectKey>
+		insert into t_user
+		(
+	      name
+	      ,mail
+	   	  ,password
+	   	  ,gmt_create
+	   	  ,gmt_modified)
+	      values
+	   (
+	   	  #{name}
+	   	  ,#{mail}
+	   	  ,#{password}
+	   	  ,now()
+	   	  ,now()
+	      
+	   )
+	</insert>
+	
+	<!-- 根据企业用户ID称更新密码 -->
+	<update id="updateUserPwdById" parameterType="UserEntity">
+		update t_user set password = #{password}, gmt_modified=now() where id=#{id}
+	</update>
+	
+	
 </mapper>

@@ -8,6 +8,12 @@ public interface UserDAO {
 	 * @return
 	 */
 	UserEntity queryUserEntityById(int id);
+	
+	UserEntity queryUserEntityByName(String name);
 
-	UserEntity queryUserEntityByMail(String cn);
+	UserEntity queryUserEntityByMail(String mail);
+	
+	int updateUserPwdById(UserEntity user);
+	
+	int insertUserEntity(UserEntity user);
 }

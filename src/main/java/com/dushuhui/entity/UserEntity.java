@@ -9,6 +9,8 @@ public class UserEntity implements Serializable
 	public int id;
 	//
 	public String name;
+	
+	public String mail;
 	//
 	public String password;
 	//
