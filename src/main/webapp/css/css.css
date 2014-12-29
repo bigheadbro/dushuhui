@@ -1,6 +1,6 @@
 ﻿.navbar-wrapper {position: absolute;top: 0;right: 0;left: 0;z-index: 20;}
 .header {background: #222;background-repeat: no-repeat;background-position: center 0;background-size: cover;padding: 138px 0 0;text-align: center;min-height: 400px;position: relative;}
-.logotxt {color: #fff;}
+.logotxt {color: #fff;margin-top: 50px;}
 .logotxt a{color: #fff;font-weight: 700;font-size: 48px;}
 .logotxt a:hover{color: #fff;text-decoratoin:underline;}
 /*768*/
